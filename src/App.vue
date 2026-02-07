@@ -4,11 +4,13 @@ import { ref } from 'vue'
 // declare reactive variables
 const name = ref('Jake the Dog')
 const status = ref(true)
-const tasks = ref(['clean', 'walk', 'eat'])
 
 function change() {
   status.value = !status.value
 }
+
+//!2-
+const tasks = ref(['clean', 'walk', 'eat'])
 </script>
 <template>
   <div class="condtiom-directives">
@@ -20,7 +22,7 @@ function change() {
   <div class="loop">
     <h2>Tasks</h2>
     <ul>
-      <li v-for="task in tasks" :key="task"></li>
+      <li v-for="task in tasks" :key="task">{{ task }}</li>
     </ul>
   </div>
 </template>
